@@ -1,38 +1,450 @@
-.App {
+@import url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
+
+.header {
+  height: 600px;
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  padding-left: 250px;
+  padding-right: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 0 150px;
+}
+
+.BG-pattern {
+  top: -1200px;
+  left: -300px;
+  transform: scale(0.75vh);
+  transform-origin: 0 0;
+  z-index: 0;
+  position: absolute;
+}
+
+.navbar {
+  position: relative;
+  margin-top: 100px;
+  z-index: 1;
+  font-family: "Overpass";
+  font-weight: bold;
+  color: hsl(0, 0%, 91%);
+}
+
+.logo-img {
+  float: left;
+}
+
+.drop-down {
+  padding-top: 15px;
+  float: left;
+  padding-left: 70px;
+}
+
+.nav-desktop-menu {
+  overflow: hidden;
+}
+.navbar-login {
+  padding-top: 7px;
+  float: right;
+  padding-right: 50px;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.navbar-signup {
+  float: right;
+  font-family: "Overpass";
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px 32px 12px 32px;
+  background-color: white;
+  color: hsl(356, 100%, 66%);
+  border: none;
+}
+
+.hamburger-menu {
+  display: none;
+  float: right;
+  right: 150px;
+  width: 120px;
   text-align: center;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  margin-top: 11px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ham-item {
+  font-family: "Overpass";
+  position: relative;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  border: none;
+  background-color: hsl(356, 100%, 66%);
+  padding: 14px 0 14px 0;
+  border-width: 1px 1px 0 1px;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ham-first {
+  border-width: 0 1px 0 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.ham-last {
+  border: none;
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  color: hsl(356, 100%, 66%);
+}
+
+.header-content {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+
+.header-title {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  margin-top: 110px;
+  color: white;
+  font-size: 70px;
+  margin-bottom: 25px;
+}
+
+.header-text {
+  font-family: "Overpass";
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.button-start {
+  font-family: "Overpass";
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px 15px 12px 15px;
+  background-color: white;
+  color: hsl(356, 100%, 66%);
+  border: solid;
+  border-color: white;
+  margin-right: 25px;
+}
+
+.button-learn {
+  font-family: "Overpass";
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px 15px 12px 15px;
+  background-color: transparent;
+  color: white;
+  border: solid;
+}
+
+.page-two {
+  position: relative;
+  overflow: hidden;
+  padding-left: 250px;
+  padding-right: 250px;
+  font-family: "Ubuntu";
+}
+
+.circle-svg {
+  position: absolute;
+  right: -200px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.page-two-header {
+  color: hsl(208, 49%, 24%);
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.page-two-content {
+  min-height: 700px;
+  margin-top: 100px;
+  max-width: 600px;
+}
+
+.page-two-sub-header {
+  color: hsl(208, 49%, 24%);
+  font-weight: 600;
+  font-size: 28px;
+  margin-top: 80px;
+}
+
+.page-two-text {
+  color: hsl(0, 0%, 25%);
+  font-weight: 300;
+  font-size: 19px;
+  margin-top: 40px;
+  line-height: 1.8;
+}
+
+.phone-wrapper {
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+  margin-top: -50px;
+  margin-left: 200px;
+  overflow-x: auto;
+}
+
+.page-three {
+  margin-top: -30px;
+  min-height: 450px;
+  background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  padding-left: 250px;
+  padding-right: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 150px 0 150px;
+  z-index: -1;
+  font-family: "Ubuntu";
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.page-three-full-wrapper {
+  overflow-x: clip;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.page-three-circle {
+  position: absolute;
+  top: -400px;
+  left: -100px;
+}
+.page-three-content {
+  font-weight: 600;
+  font-size: 28px;
+  margin-left: 750px;
+  padding: auto;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-three-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page-three-title {
+  font-size: 40px;
+}
+
+.page-three-text {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.page-four-laptop-svg {
+  position: absolute;
+  left: -200px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.page-four {
+  position: relative;
+  overflow: hidden;
+  padding-left: 250px;
+  padding-right: 250px;
+  font-family: "Ubuntu";
+}
+
+.page-four-content {
+  min-height: 700px;
+  margin-top: 120px;
+  max-width: 900px;
+  margin-left: 600px;
+}
+
+.page-four-sub-header {
+  color: hsl(208, 49%, 24%);
+  font-weight: 600;
+  font-size: 28px;
+  margin-top: 80px;
+}
+
+.page-four-text {
+  color: hsl(0, 0%, 25%);
+  font-weight: 300;
+  font-size: 19px;
+  margin-top: 40px;
+  line-height: 1.8;
+}
+
+.footer {
+  height: 320px;
+  margin-top: 50px;
+  border-radius: 0 150px 0 0;
+  background-color: hsl(240, 10%, 16%);
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 100px;
+  display: flex;
+  font-family: "Overpass";
+  position: relative;
+}
+
+.footer-logo {
+  float: left;
+}
+
+.footer-wrapper {
+  float: left;
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15%;
+}
+
+.footer-columns {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-button {
+  border: none;
+  background-color: transparent;
+  color: rgb(179, 179, 179);
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+@media (max-width: 1391px) {
+  .hamburger-menu {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .header-title {
+    margin-top: 70px;
+    font-size: 50px;
+  }
+  .header-text {
+    font-size: 20px;
+  }
+
+  .header {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .nav-desktop-menu {
+    display: none;
+  }
+
+  .page-two {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .circle-svg {
+    display: none;
+  }
+
+  .page-four-laptop-svg {
+    display: none;
+  }
+
+  .page-two-content {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .page-three {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .page-three-content {
+    position: relative;
+    margin: auto;
+    margin-top: 400px;
+  }
+
+  .page-four {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .page-four-content {
+    margin-left: 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .footer {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (max-width: 830px) {
+  .header {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .header-title {
+    margin-top: 60px;
+    font-size: 40px;
+  }
+  .header-text {
+    font-size: 20px;
+  }
+  .page-two {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .page-three {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 50px;
+  }
+  .page-four {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .footer {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: block;
+  }
+  .footer-columns {
+    width: 100%;
+  }
+  .footer {
+    height: 800px;
+  }
+  .header-content {
+    width: 280px;
+  }
+  .hamburger-menu {
+    right: -80px;
   }
 }
